@@ -1,0 +1,1 @@
+{"name":"vi-no-sekai-enterprise","scripts":{"start":"eleventy --serve","build":"eleventy"}}
