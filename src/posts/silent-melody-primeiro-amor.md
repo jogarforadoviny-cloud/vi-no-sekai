@@ -1,13 +1,18 @@
 ---
 layout: layouts/post.njk
 title: "First Love: Hatsukoi — o amor que a gente deixa ir sem saber que era o certo"
-cover: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1600&auto=format&fit=crop"
-rating: 4
+cover: /uploads/first-love-hatsukoi-gqca-cp-1-1250x702.webp
 category: Dorama
-tags: [primeiro-amor, reencontro, netflix-japao, romance]
-date: 2026-07-02
+rating: 4
 spoiler: true
-excerpt: "Um dorama sobre dois ex-namorados que se reencontram vinte anos depois — e sobre como a vida separa pessoas que nunca deixaram de se amar."
+tags:
+  - primeiro-amor
+  - reencontro
+  - netflix-japao
+  - romance
+excerpt: Um dorama sobre dois ex-namorados que se reencontram vinte anos depois
+  — e sobre como a vida separa pessoas que nunca deixaram de se amar.
+date: 2026-07-02
 ---
 Tem um tipo específico de dor que "First Love" sabe explorar melhor do que quase qualquer coisa que eu já vi: a dor de amar alguém no tempo errado. Yae e Harumichi se conhecem no colégio, se apaixonam do jeito intenso que só existe quando a gente é jovem e ainda não aprendeu a se proteger, e então a vida — não uma vilã, não uma traição, só a vida mesmo — os separa.
 
