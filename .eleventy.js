@@ -1,1 +1,0 @@
-module.exports=function(eleventyConfig){eleventyConfig.addPassthroughCopy({'src/assets':'assets','src/admin':'admin'});eleventyConfig.addCollection('posts',c=>c.getFilteredByGlob('src/posts/*.md'));return{dir:{input:'src',includes:'_includes',output:'_site'}};}
