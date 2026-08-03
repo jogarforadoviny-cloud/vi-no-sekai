@@ -6,8 +6,8 @@ backend:
 media_folder: "src/uploads"
 public_folder: "/uploads"
 
-site_url: https://SEU-SITE.netlify.app
-display_url: https://SEU-SITE.netlify.app
+site_url: https://bejewelled-paprenjak-059712.netlify.app
+display_url: https://bejewelled-paprenjak-059712.netlify.app
 logo_url: https://SEU-SITE.netlify.app/favicon.svg
 
 locale: "pt"
