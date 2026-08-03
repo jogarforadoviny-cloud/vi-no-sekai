@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: "Frieren: Além do Fim da Jornada — sobre o tempo que a gente não guarda"
-cover: /uploads/8i28qjcwwc0b1.jpg
+cover: /uploads/images.jpg
 category: Anime
 rating: 5
 spoiler: false
