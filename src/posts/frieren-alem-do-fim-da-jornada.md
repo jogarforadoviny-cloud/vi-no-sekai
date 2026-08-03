@@ -1,13 +1,18 @@
 ---
 layout: layouts/post.njk
 title: "Frieren: Além do Fim da Jornada — sobre o tempo que a gente não guarda"
-cover: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=1600&auto=format&fit=crop"
-rating: 5
+cover: /uploads/8i28qjcwwc0b1.jpg
 category: Anime
-tags: [frieren, slow-life, luto, fantasia]
-date: 2026-06-14
+rating: 5
 spoiler: false
-excerpt: "Um anime sobre uma maga que vive por séculos e sobre o quanto a gente demora pra perceber o valor do tempo que passamos com quem amamos."
+tags:
+  - frieren
+  - slow-life
+  - luto
+  - fantasia
+excerpt: Um anime sobre uma maga que vive por séculos e sobre o quanto a gente
+  demora pra perceber o valor do tempo que passamos com quem amamos.
+date: 2026-06-14
 ---
 Eu demorei pra entender por que "Frieren" me afetou tanto, porque na superfície é só... uma maga elfa caminhando por vilarejos depois que a jornada "principal" já acabou. Não tem vilão a cada episódio. Não tem pressa. E foi exatamente isso que me pegou.
 
