@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+title: Início
+---
+{% from "partials/card.njk" import renderCard %}
+
+<section class="hero container">
+  <div class="hero-deco"></div>
+  <span class="hero-kicker">um diário sobre histórias que ficam</span>
+  <h1>Reviews que misturam <span class="grad-text">tela</span> e <span class="grad-text">vida real</span>.</h1>
+  <p>Anime, dorama e kdrama vistos com o coração aberto — não é sinopse, é sobre o que essas histórias despertam em mim. E, talvez, em você também.</p>
+</section>
+
+<section class="container" id="reviews">
+  <span class="featured-label">✦ os mais recentes</span>
+  <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+    {% for post in collections.posts | limit(3) %}
+      {{ renderCard(post, true) }}
+    {% endfor %}
+  </div>
+
+  {% if collections.posts.length > 3 %}
+  <span class="featured-label">todas as histórias</span>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Tudo</button>
+    <button class="filter-btn" data-filter="Anime">Anime</button>
+    <button class="filter-btn" data-filter="Dorama">Dorama</button>
+    <button class="filter-btn" data-filter="Kdrama">Kdrama</button>
+  </div>
+  <div class="grid">
+    {% for post in collections.posts %}
+      {% if loop.index > 3 %}{{ renderCard(post, false) }}{% endif %}
+    {% endfor %}
+  </div>
+  <p class="empty-state" data-empty-state style="display:none;">nenhuma review por aqui ainda nessa categoria ✦</p>
+  {% endif %}
+
+  {% if collections.posts.length == 0 %}
+  <p class="empty-state">ainda não publiquei nenhuma review — isso vai mudar em breve ✦</p>
+  {% endif %}
+</section>

@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+---
+<article class="container">
+  <div class="post-hero">
+    <img src="{{ cover }}" alt="Capa de {{ title }}">
+    <div class="post-hero-content">
+      <h1>{{ title }}</h1>
+      <div class="post-meta-row">
+        <span class="badge {{ category | lower }}">{{ category }}</span>
+        <span class="stars" aria-label="Nota {{ rating }} de 5">
+          {% for filled in rating | stars %}
+          <svg class="star {{ 'filled' if filled }}" viewBox="0 0 24 24"><path d="M12 2l2.9 6.4 7.1.7-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7-5.4-4.7 7.1-.7z"/></svg>
+          {% endfor %}
+        </span>
+        <span style="color:var(--ink-soft); font-size:0.85rem;">{{ date | dataBr }}</span>
+      </div>
+    </div>
+  </div>
+
+  {% if spoiler %}
+  <div class="spoiler-notice">
+    <span>⚠</span>
+    <span>Esse review contém spoilers importantes da história. Se você ainda não viu, talvez queira assistir antes de continuar lendo.</span>
+  </div>
+  {% endif %}
+
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+
+  {% if tags %}
+  <div class="post-tags">
+    {% for tag in tags %}<span class="tag">#{{ tag }}</span>{% endfor %}
+  </div>
+  {% endif %}
+</article>

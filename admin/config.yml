@@ -1,0 +1,73 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Isso permite fazer upload de imagens de capa direto pelo painel
+media_folder: "src/uploads"
+public_folder: "/uploads"
+
+site_url: https://SEU-SITE.netlify.app
+display_url: https://SEU-SITE.netlify.app
+logo_url: https://SEU-SITE.netlify.app/favicon.svg
+
+locale: "pt"
+
+collections:
+  - name: "posts"
+    label: "Reviews"
+    label_singular: "Review"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{category}} ({{rating}}★)"
+    sortable_fields: ["date", "title", "rating"]
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Título", name: "title", widget: "string", hint: "Ex: Frieren — sobre o tempo que a gente não guarda" }
+      - { label: "Imagem de capa", name: "cover", widget: "image", hint: "Recomendado: paisagem, boa resolução" }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options: ["Anime", "Dorama", "Kdrama"]
+      - label: "Nota"
+        name: "rating"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 5
+        default: 5
+        hint: "De 1 a 5 estrelas"
+      - label: "Contém spoiler?"
+        name: "spoiler"
+        widget: "boolean"
+        default: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        hint: "Ex: slow-life, luto, fantasia"
+      - label: "Resumo curto (aparece no card da home)"
+        name: "excerpt"
+        widget: "text"
+        required: false
+      - label: "Data de publicação"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Texto da review"
+        name: "body"
+        widget: "markdown"
+
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - label: "Sobre"
+        name: "sobre"
+        file: "src/sobre.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" }
+          - { label: "Título", name: "title", widget: "hidden", default: "Sobre" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/sobre/" }
+          - { label: "Conteúdo (HTML)", name: "body", widget: "markdown" }

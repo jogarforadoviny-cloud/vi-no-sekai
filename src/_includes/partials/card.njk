@@ -1,0 +1,28 @@
+{% macro renderCard(post, featured) %}
+<article class="card fade-up" data-category="{{ post.data.category }}">
+  <a href="{{ post.url }}">
+    <div class="card-cover">
+      <img src="{{ post.data.cover }}" alt="Capa de {{ post.data.title }}" loading="lazy">
+      <span class="badge {{ post.data.category | lower }}">{{ post.data.category }}</span>
+      {% if not featured %}<h3 class="card-title-overlay">{{ post.data.title }}</h3>{% endif %}
+    </div>
+    <div class="card-body">
+      {% if featured %}<h3 style="margin-bottom:8px;">{{ post.data.title }}</h3>{% endif %}
+      <div class="card-meta">
+        <span class="stars" aria-label="Nota {{ post.data.rating }} de 5">
+          {% for filled in post.data.rating | stars %}
+          <svg class="star {{ 'filled' if filled }}" viewBox="0 0 24 24"><path d="M12 2l2.9 6.4 7.1.7-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7-5.4-4.7 7.1-.7z"/></svg>
+          {% endfor %}
+        </span>
+        {% if post.data.spoiler %}<span class="badge-spoiler">⚠ spoiler</span>{% endif %}
+      </div>
+      <p class="card-excerpt">{{ post.data.excerpt or (post.templateContent | striptags | truncate(110)) }}</p>
+      {% if post.data.tags %}
+      <div class="card-tags">
+        {% for tag in post.data.tags %}<span class="tag">#{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </a>
+</article>
+{% endmacro %}
