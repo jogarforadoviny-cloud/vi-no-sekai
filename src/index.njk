@@ -2,4 +2,52 @@
 layout: layouts/base.njk
 title: Home
 ---
-<h1>Vi no Sekai</h1><p>Reviews emocionais de anime, dorama e kdrama.</p>{% for post in collections.posts %}<div><a href="{{post.url}}">{{post.data.title}}</a></div>{% endfor %}
+
+<section class="hero">
+
+<h1>Vi no Sekai</h1>
+
+<p>
+
+Reviews emocionais sobre anime,
+dorama e kdrama.
+
+Não apenas histórias.
+
+Memórias.
+
+</p>
+
+</section>
+
+<h2 class="section-title">
+
+Últimos Reviews
+
+</h2>
+
+<div class="grid">
+
+{% for post in collections.posts %}
+
+{{ post.url }}
+
+<div class="card-cover"></div>
+
+<div class="card-content">
+
+<div class="badge">
+{{ post.data.category }}
+</div>
+
+<h3>
+{{ post.data.title }}
+</h3>
+
+</div>
+
+</a>
+
+{% endfor %}
+
+</div>
