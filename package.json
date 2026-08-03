@@ -1,0 +1,16 @@
+{
+  "name": "vi-no-sekai",
+  "version": "1.0.0",
+  "description": "Blog de reviews de anime, dorama e kdrama - Vi no Sekai",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "luxon": "^3.4.4"
+  }
+}
