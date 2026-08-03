@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: "First Love: Hatsukoi — o amor que a gente deixa ir sem saber que era o certo"
-cover: /uploads/images.jpg
+cover: /uploads/first-love-hatsukoi-gqca-cp-1-1250x702.webp
 category: Dorama
 rating: 4
 spoiler: true
